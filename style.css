@@ -1,0 +1,222 @@
+/* Base Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  overflow-x: hidden;
+}
+
+/* Centered Container */
+.error-container {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+/* CSS Space Illustration */
+.illustration-wrapper {
+  position: relative;
+  width: 180px;
+  height: 140px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Planet */
+.planet {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(135deg, #f97316 0%, #c2410c 100%);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(249, 115, 22, 0.3);
+  overflow: hidden;
+}
+
+.crater {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 50%;
+}
+.crater-1 { width: 22px; height: 22px; top: 25px; left: 20px; }
+.crater-2 { width: 34px; height: 34px; top: 55px; left: 50px; }
+.crater-3 { width: 14px; height: 14px; top: 20px; left: 65px; }
+
+/* Astronaut */
+.astronaut {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+.helmet {
+  width: 54px;
+  height: 50px;
+  background: #e2e8f0;
+  border-radius: 50% 50% 45% 45%;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.visor {
+  width: 38px;
+  height: 24px;
+  background: #0ea5e9;
+  border-radius: 12px;
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  border: 2px solid #38bdf8;
+}
+
+.body {
+  width: 44px;
+  height: 38px;
+  background: #cbd5e1;
+  border-radius: 8px 8px 18px 18px;
+  margin: -6px auto 0 auto;
+}
+
+.backpack {
+  width: 12px;
+  height: 32px;
+  background: #94a3b8;
+  border-radius: 4px;
+  position: absolute;
+  top: 48px;
+  left: 2px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-16px) rotate(6deg);
+  }
+}
+
+/* Typography */
+.error-code {
+  font-size: clamp(4.5rem, 12vw, 6.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #f43f5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.error-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.75rem;
+}
+
+.error-desc {
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0284c7, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Redirect text */
+.redirect-notice {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.redirect-notice span {
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Lost in Space | Page Not Found</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="error-container">
+    <div class="card" id="errorCard">
+      <!-- CSS Floating Astronaut / Planet Illustration -->
+      <div class="illustration-wrapper">
+        <div class="planet">
+          <div class="crater crater-1"></div>
+          <div class="crater crater-2"></div>
+          <div class="crater crater-3"></div>
+        </div>
+        <div class="astronaut">
+          <div class="helmet">
+            <div class="visor"></div>
+          </div>
+          <div class="body"></div>
+          <div class="backpack"></div>
+        </div>
+      </div>
+
+      <!-- Large Readable 404 Heading -->
+      <h1 class="error-code">404</h1>
+
+      <!-- Friendly Message -->
+      <h2 class="error-title">Oops! You've drifted into deep space</h2>
+      <p class="error-desc">
+        The page you are searching for might have been removed, had its name changed,
+        or never existed in this orbit.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <a href="/" class="btn btn-primary" id="homeBtn">Take Me Home</a>
+        <button class="btn btn-secondary" id="backBtn">Go Back</button>
+      </div>
+
+      <!-- Optional dynamic timer message -->
+      <p class="redirect-notice">
+        Redirecting to homepage automatically in <span id="timer">15</span>s...
+      </p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
